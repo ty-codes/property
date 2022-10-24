@@ -1,0 +1,55 @@
+@font-face {
+    font-family: Metropolis;
+    src: url(./fonts/metropolis.regular.woff);
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.building {
+    height: 100vh;
+    /* position: absolute; */
+}
+
+.building .bg {
+    height: 100vh;
+    width: 115%;
+
+}
+
+.building .logo_wrap {
+    left: 2em;
+    top: 3.5em;
+    position: absolute;
+    color: #fff;
+    font-weight: 600;
+}
+
+.building .logo {
+    margin-right: 1em;
+}
+
+.wrapper {
+    /* display: flex;
+    justify-content: center; */
+    /* padding: 10em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.btn_group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

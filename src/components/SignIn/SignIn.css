@@ -1,0 +1,199 @@
+#signin {
+    font-family: 'Metropolis';
+}
+
+#signin .heading {
+    margin-bottom: -0.2em;
+    font-size: 40px;
+}
+
+#signin .subtitle {
+    margin-bottom: 3em;
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: 300;
+}
+
+.signin {
+    width: 85%;
+}
+
+label {
+    text-align: left;
+
+    color: #464646;
+    font-size: 1em;
+    padding-bottom: 10px;
+    margin-left: -67%;
+
+}
+
+input[type=email] {
+    border: 1px solid #C5D8FF;
+    height: 4.5em;
+    border-radius: 10px;
+    width: 90%;
+    margin-bottom: 1em;
+
+    /* margin-left: -10%; */
+}
+
+::-webkit-input-placeholder {
+    color: #979797;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.btn_group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.btn_group button {
+    width: 80%;
+    border: 1px solid #C5D8FF;
+    height: 4em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-left: 10%;
+}
+
+.btn_group span img {
+    margin-right: 2em;
+    margin-left: -5em;
+    width: 1em;
+}
+
+.btn_group span {
+    color: #464646;
+    font-size: 1.4em;
+    font-weight: lighter;
+    margin-left: 3em;
+
+}
+
+#signin_btn {
+    margin-left: 0;
+    width: 90%;
+    margin-bottom: 1.4em;
+}
+
+form {
+    border: 1.17412px solid #C5D8FF;
+    padding: 40px 20px;
+    border-radius: 10px;
+    /* margin-left: 0; */
+
+}
+
+form a {
+    text-decoration: none;
+    color: #fff;
+}
+
+form .phone_link {
+    color: #64748B;
+    font-size: 1.3em;
+
+}
+
+form .phone_link span,
+form .phone_link a {
+    text-decoration: none;
+    color: #1363FF;
+    font-weight: 700;
+}
+
+form .phone_link span:hover {
+    cursor: pointer;
+}
+
+/* phone section */
+.phone_wrap {
+    border: 1px solid #C5D8FF;
+    border-radius: 10px;
+    height: 3.8em;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    text-align: left;
+    color: #1A1A1B;
+    font-weight: bold;
+}
+
+.phone_wrap span {
+    color: #1A1A1B;
+    font-weight: 500;
+    /* padding-top: 1em; */
+}
+
+.phone_wrap input {
+    border: none;
+    outline: none;
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 1px solid #979797;
+}
+
+/* mobile design */
+@media (max-width:1400px) {
+    .building .bg {
+        width: 100%;
+        height: 100vh;
+    }
+    
+}
+@media (max-width: 640px) {
+    #signin .wrapper {
+        margin-left: 0.5em;
+    }
+    #signin .btn_group button {
+        width: 91%;
+        
+        margin-left: 5%;
+    }
+}
+
+@media (max-width:550px) {
+    #signin .btn_group span img {
+        margin-right: 1em;
+        margin-left: -3em;
+    }
+}
+@media (max-width: 500px) {
+    #signin .wrapper {
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    #signin .heading, #signin .subtitle {
+        margin-left: -1em;
+    }
+    #signin form {
+        border: none;
+        margin-left: -2.7em;
+    }
+    #signin input[type=email] {
+        width: 110%;
+    }
+    #signin .btn_group button {
+        width: 100%;
+    }
+    #signin_btn {
+        margin-left: 2em;
+        
+    }
+    #signin .phone_wrap input {
+        width: 69%;
+    }
+    #signin .phone_wrap {
+        width: 100%;
+    }
+}
