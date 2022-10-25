@@ -34,10 +34,13 @@ input[type=email] {
     border-radius: 10px;
     width: 90%;
     margin-bottom: 1em;
-
+    padding-left: 1em;
     /* margin-left: -10%; */
 }
+input {
+    padding-left: 1em;
 
+}
 ::-webkit-input-placeholder {
     color: #979797;
     font-size: 14px;
@@ -68,7 +71,7 @@ input[type=email] {
 
 .btn_group span {
     color: #464646;
-    font-size: 1.4em;
+    font-size: 1.1em;
     font-weight: lighter;
     margin-left: 3em;
 
@@ -78,8 +81,44 @@ input[type=email] {
     margin-left: 0;
     width: 90%;
     margin-bottom: 1.4em;
+    background-color: #1363FF;
+    color: #fff;
+}
+.access_wrap {
+    display: flex;
+    justify-content: center;
+}
+.link {
+    color: #1363FF;
+    text-decoration: none;
+}
+.capitalize {
+    text-transform: capitalize;
 }
 
+.access {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid #DADADA;
+    margin-bottom: 2em;
+    width: 80%;
+}
+.access span {
+    color: #979797;
+    font-size: 1.3em;
+    text-align: center;
+    margin: auto;
+}
+#active {
+    color: #1363FF;
+    border-bottom: 3px solid #1363FF;
+    width: 55%;
+}
+#inactive {
+    color: #979797;
+}
 form {
     border: 1.17412px solid #C5D8FF;
     padding: 40px 20px;
@@ -90,21 +129,14 @@ form {
 
 form a {
     text-decoration: none;
-    color: #fff;
 }
 
-form .phone_link {
+.register_link {
     color: #64748B;
-    font-size: 1.3em;
-
+    margin-top: 2em;
 }
 
-form .phone_link span,
-form .phone_link a {
-    text-decoration: none;
-    color: #1363FF;
-    font-weight: 700;
-}
+
 
 form .phone_link span:hover {
     cursor: pointer;
@@ -137,6 +169,8 @@ form .phone_link span:hover {
     margin-left: 1em;
     padding-left: 1em;
     border-left: 1px solid #979797;
+    padding-left: 1em;
+
 }
 
 /* mobile design */

@@ -1,47 +1,24 @@
 import React, { useState } from "react";
 import './SignIn.css';
+import { Link } from 'react-router-dom';
 
 export default function SignIn(): JSX.Element {
     const [access, setAccess] = useState('email');
 
-    const emailAccess = () => {
+    const emailAccess = (): JSX.Element => {
         return (
-            <form id="email">
+            <>
                 <label htmlFor="email">Email Address</label><br />
                 <input name="email" type="email" placeholder="Enter Email Address" required /><br />
-                <button id="signin_btn" className="btn filled_btn" type="submit"><a href="#">Sign in</a></button>
-
-                <div className="btn_group">
-                    <button><span><img src={require("../../assets/apple.png")} alt='apple_icon' />Continue with Apple</span></button>
-                    <button><span><img src={require("../../assets/google.png")} alt='google_icon' />Continue with Google</span></button>
-                    <button><span><img src={require("../../assets/fb.png")} alt='fb_icon' />Continue with Facebook</span></button>
-
-
-                </div>
-                <p className="phone_link">Or sign in with <span onClick={() => setAccess('phone')}>Phone Number</span></p>
-            </form>
-
+            </>
         )
     }
-
-    const phoneAccess = () => {
+    const phoneAccess = (): JSX.Element => {
         return (
-            <form id="phone">
-                <div className="phone_wrap">
-                    <span>+234</span>
-                    <input id="phone_number" type="tel" maxLength={11} required /><br />
-                </div>
-                <button id="signin_btn" className="btn filled_btn" type="submit"><a href="#">Sign in</a></button>
-
-                <div className="btn_group">
-                    <button><span><img src={require("../../assets/apple.png")} alt='apple_icon' />Continue with Apple</span></button>
-                    <button><span><img src={require("../../assets/google.png")} alt='google_icon' />Continue with Google</span></button>
-                    <button><span><img src={require("../../assets/fb.png")} alt='fb_icon' />Continue with Facebook</span></button>
-
-
-                </div>
-                <p className="phone_link">Haven't signed up yet? <a href="/register" >Create an account</a></p>
-            </form>
+            <div className="phone_wrap">
+                <span>+234</span>
+                <input id="phone_number" type="tel" maxLength={11} required /><br />
+            </div>
         )
     }
     return (
@@ -50,20 +27,46 @@ export default function SignIn(): JSX.Element {
                 <div className="mini_container signin">
                     <p className="heading">Sign in To Property</p>
                     <p className="subtitle capitalize">Hey there, welcome back</p>
+                    <span className="access_wrap">
+                        <span className="access">
+                            <span
+                                onClick={() => setAccess('email')}
+                                id={access === 'email' ? 'active' : "inactive"}
+                            >Email</span>
+                            <span
+                                onClick={() => setAccess('phone')}
+                                id={access === 'email' ? 'inactive' : "active"}
+                            >Phone Number</span>
+                        </span>
+                    </span>
 
-                    {(access === 'email')
-                        ? emailAccess()
-                        : phoneAccess()
-                    }
+                    <>
+                        <form id={access === 'email' ? 'email' : 'phone'} >
+                            {(access === 'email')
+                                ? emailAccess()
+                                : phoneAccess()
+                            }
+                            <button id="signin_btn" className="btn filled_btn" type="submit"><a href="#">Sign in</a></button>
+
+                            <div className="btn_group">
+                                <button><span><img src={require("../../assets/google.png")} alt='google_icon' />Continue with Google</span></button>
+                                <button><span><img src={require("../../assets/fb.png")} alt='fb_icon' />Continue with Facebook</span></button>
+
+
+                            </div>
+                            <Link to='/register' className="link capitalize">forgot password?</Link>
+                        </form>
+                        <p className="register_link">Haven't signed up yet? <Link className='link' to="/register" >Create an account</Link></p>
+
+
+                    </>
+
 
 
                 </div>
 
             </div>
         </div>
-
-
-
     )
 }
 
